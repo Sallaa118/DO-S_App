@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    background-color: #001f3f; /* Dark blue background */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #004d40; /* Dark green header */
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Container */
+.container {
+    margin: 60px 40px;
+}
+
+/* Schedule Header */
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adds space between elements */
+}
+
+.schedule-header h2 {
+    flex-shrink: 0; /* Keeps the title from shrinking */
+}
+
+#search {
+    flex-grow: 1; /* Makes the search bar take up available space */
+    max-width: 400px; /* Restricts the search bar width */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #004d40; /* Dark green accent */
+    background-color: #003333; /* Deep green background for input */
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+#search:focus {
+    border-color: #00796b; /* Bright green focus accent */
+}
+
+/* Buttons Styling */
+button {
+    background-color: #004d40; /* Dark green background */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px; /* Smooth rounded corners */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #00796b; /* Bright green hover effect */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Schedule List */
+.schedule-list {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule-item {
+    background: linear-gradient(135deg, #001f3f, #004d40); /* Blue-green gradient */
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.schedule-item:hover {
+    transform: scale(1.02);
+    background-color: #003333; /* Deep green hover effect */
+}
+
+.schedule-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.schedule-notes {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.schedule-deadline {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* Button Group */
+.btn-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: linear-gradient(145deg, #003333, #001f3f); /* Blue-green gradient */
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 400px;
+    animation: popup-show 0.3s ease-in-out;
+}
+
+.popup-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.popup-content input[type="text"],
+.popup-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #003333; /* Deep green background */
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.popup-content input[type="text"]:focus,
+.popup-content textarea:focus {
+    outline: 2px solid #004d40; /* Green focus effect */
+}
+
+/* Flatpickr Calendar Styling */
+.flatpickr-calendar {
+    background: #004d40; /* Dark green background */
+    color: #fff; /* White text */
+    border: 1px solid #00796b; /* Bright green border */
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Modern shadow */
+    padding: 10px;
+}
+
+.flatpickr-calendar .flatpickr-day {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    margin: 2px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.flatpickr-calendar .flatpickr-day:hover {
+    background-color: #00796b; /* Bright green hover effect */
+    color: #fff; /* White text */
+}
+
+.flatpickr-calendar .flatpickr-day.selected {
+    background-color: #6a11cb; /* Purple for selected date */
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Alerts Styling */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.alert-success {
+    background-color: #054473;
+}
+
+.alert-danger {
+    background-color: #6d0505;
+}
+
+.alert:hover {
+    transform: scale(1.05); /* Interactive hover effect */
+}
+
+/* Popup Animations */
+@keyframes popup-show {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .popup-content {
+        width: 90%;
+    }
+}

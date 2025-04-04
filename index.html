@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do-S</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script> <!-- Link to external JS file -->
+</head>
+<body>
+    <header>
+        <h1>Do-S</h1>
+    </header>
+    <div class="container">
+        <main>
+            <div class="schedule-header">
+                <h2>My Schedule</h2>
+                <input type="text" id="search" placeholder="Search title..." aria-label="Search by title">
+                <button id="add-btn" aria-label="Add Schedule">
+                    <i class="fas fa-plus"></i> Add Schedule
+                </button>
+            </div>
+            <ul class="schedule-list"></ul>
+        </main>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h3>Schedule</h3>
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="Enter title">
+            <label for="notes">Notes:</label>
+            <textarea id="notes" placeholder="Enter notes"></textarea>
+            <label for="deadline">Deadline:</label>
+            <input type="text" id="deadline">
+            <div class="popup-buttons">
+                <button id="add-schedule-btn">Add</button>
+                <button id="clear-btn">Clear</button> <!-- Clear button added -->
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="edit-popup">
+        <div class="popup-content">
+            <h3>Edit Schedule</h3>
+            <label for="edit-title">Title:</label>
+            <input type="text" id="edit-title" placeholder="Enter title">
+            <label for="edit-notes">Notes:</label>
+            <textarea id="edit-notes" placeholder="Enter notes"></textarea>
+            <label for="edit-deadline">Deadline:</label>
+            <input type="text" id="edit-deadline">
+            <button id="edit-schedule-btn">Edit</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+</html>
